@@ -14,6 +14,9 @@ import org.hibernate.validator.constraints.br.CPF;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
+/**
+ * Mantem as informções de clientes que efetivaram compras
+ */
 @Entity
 public class Cliente {
 	@Id
