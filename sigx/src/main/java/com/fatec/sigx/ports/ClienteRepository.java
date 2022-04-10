@@ -10,5 +10,6 @@ import com.fatec.sigx.model.Cliente;
 public interface ClienteRepository extends JpaRepository <Cliente, Long>{
 	Optional<Cliente> findByCpf(String cpf);
 	List<Cliente> findAllByNomeIgnoreCaseContaining(String nome);
+	Optional<Cliente> findByCep(String cep);
 }
 
