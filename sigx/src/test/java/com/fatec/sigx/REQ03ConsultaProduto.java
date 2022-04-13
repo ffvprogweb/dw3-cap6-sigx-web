@@ -19,7 +19,7 @@ class REQ03ConsultaProduto {
 		Produto p = new Produto ("1111", 4, "parafuso") ;
 		repository.save(p);
 		//No property 'codigoProdutox' found for type 'Produto'!
-		Optional<Produto> produto = repository.findByCodigoProduto("1111");
+		Optional<Produto> produto = Optional.ofNullable(repository.findByCodigoProduto("1111"));
 		assertTrue(produto.isPresent());
 	}
 

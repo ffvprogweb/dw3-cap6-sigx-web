@@ -1,26 +1,24 @@
 package com.fatec.sigx.model;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import javax.validation.constraints.NotBlank;
 @Entity
 public class Produto {
 	@Id
+	@NotBlank
 	String codigoProduto;
 	int quantidadeNoEstoque; 
 	String descricao;
-	
 	public Produto(String codigoProduto, int quantidadeNoEstoque, String descricao) {
 		super();
 		this.codigoProduto = codigoProduto;
 		this.quantidadeNoEstoque = quantidadeNoEstoque;
 		this.descricao = descricao;
 	}
-	
 	public Produto() {
 		
 	}
-	
+
 	public String getCodigoProduto() {
 		return codigoProduto;
 	}
